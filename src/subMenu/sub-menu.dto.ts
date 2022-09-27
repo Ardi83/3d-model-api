@@ -2,7 +2,7 @@ import { Prop, Schema } from '@nestjs/mongoose';
 import { Schema as MongooseSchema } from 'mongoose';
 
 @Schema()
-export class Sketchfab {
+export class SubMenu {
   _id: string;
 
   @Prop({
@@ -24,15 +24,8 @@ export class Sketchfab {
     default: false
   })
   active?: string;
-
-  @Prop({
-    type: String,
-    required: true
-  })
-  model_uid: string;
 }
 
-export class Create3DModelDto {
+export class CreateSubMenuDto {
   name: string;
-  model_uid: string;
 }

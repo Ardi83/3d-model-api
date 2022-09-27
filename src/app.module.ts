@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
+import { MenuModule } from './menu/menu.module';
 import { SharedModule } from './shared.module';
 import { SketchfabModule } from './sketchfab/sketchfab.module';
+import { SubMenuModule } from './subMenu/sub-menu.module';
 
 @Module({
   imports: [
@@ -14,7 +16,9 @@ import { SketchfabModule } from './sketchfab/sketchfab.module';
       //   useCreateIndex: true
     }),
     SharedModule,
-    SketchfabModule
+    SketchfabModule,
+    MenuModule,
+    SubMenuModule
   ],
   controllers: [],
   providers: []
