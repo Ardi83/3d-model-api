@@ -8,8 +8,8 @@ import { CreateMenuDto, Menu } from './menu.dto';
 export class MenuService {
   constructor(@InjectModel('Menu') private menuModel: Model<MenuDocument>) {}
 
-  public async createMenu(createModelDto: CreateMenuDto): Promise<Menu> {
-    const createdMenu = new this.menuModel({ ...createModelDto });
+  public async createMenu(createMenuDto: CreateMenuDto): Promise<Menu> {
+    const createdMenu = new this.menuModel({ ...createMenuDto });
     await createdMenu.save();
     return createdMenu;
   }
