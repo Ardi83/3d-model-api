@@ -9,8 +9,6 @@ export class CustomHttpExceptionResponse {
 
 export class AccessToken {
   userId: string;
-  firstName: string;
-  lastName: string;
   email: string;
   active: boolean;
   userRole: UserRole;
