@@ -6,10 +6,10 @@ import { CreateAnimationDto, Animation } from './animation.dto';
 
 @Injectable()
 export class AnimationService {
-  constructor(@InjectModel('Animation') private AnimationModel: Model<AnimationDocument>) {}
+  constructor(@InjectModel('Animation') private animationModel: Model<AnimationDocument>) {}
 
   public async createAnimation(createAnimationDto: CreateAnimationDto): Promise<Animation> {
-    const createdAnimation = new this.AnimationModel({ ...createAnimationDto });
+    const createdAnimation = new this.animationModel({ ...createAnimationDto });
     await createdAnimation.save();
     return createdAnimation;
   }

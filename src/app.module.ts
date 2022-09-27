@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
+import { AnimationModule } from './animation/animation.module';
+import { AnnotationModule } from './annotation/annotation.module';
 import { MenuModule } from './menu/menu.module';
 import { SharedModule } from './shared.module';
 import { SketchfabModule } from './sketchfab/sketchfab.module';
@@ -18,7 +20,9 @@ import { SubMenuModule } from './subMenu/sub-menu.module';
     SharedModule,
     SketchfabModule,
     MenuModule,
-    SubMenuModule
+    SubMenuModule,
+    AnimationModule,
+    AnnotationModule
   ],
   controllers: [],
   providers: []
